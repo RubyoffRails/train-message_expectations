@@ -1,13 +1,19 @@
+# train_spec.rb
 require 'rspec'
 require './train'
-describe Conductor do
 
-	let(:engineer) { Engineer.new }
-	let(:conductor) { Conductor.new(engineer)}
+describe "Train" do
+	let(:mockboard) { double('messageboard') }
+	let(:conductor) { Train::Conductor.new(mockboard) }
+	let(:engineer)  { Train::Engineer.new(mockboard) }
 
-	it "should tell the engineer to slow down" do
-		engineer.should_receive(:slow_down!)
-		conductor.see_danger_coming!
+	it "receives a 'slow down' message when the conductor sees trouble" do
+		mockboard.should_receive(:slow_down!)
+		conductor.sees_danger_coming!
 	end
-	
+
+	it "recieves a 'confirmation' message when engineer slows down" do
+		mockboard.should_receive(:confirm_slow_down)
+		engineer.slows_down
+	end
 end

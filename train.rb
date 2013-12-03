@@ -1,15 +1,26 @@
-class Conductor
+# train.rb
 
-	attr_reader :engineer
+module Train
+	class Person
+		attr_reader :messageboard
 
-	def initialize(engineer)
-		@engineer = engineer
+		def initialize(messageboard)
+			@messageboard = messageboard
+		end
 	end
 
-	def see_danger_coming!
-		engineer.slow_down!
+	class Conductor < Person
+		def sees_danger_coming!
+			messageboard.slow_down!
+		end
 	end
-end
 
-class Engineer
+	class Engineer < Person
+		def slows_down
+			messageboard.confirm_slow_down
+		end
+	end
+
+	class MessageBoard
+	end
 end
