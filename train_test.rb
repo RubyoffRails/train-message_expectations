@@ -2,10 +2,10 @@ require 'minitest/autorun'
 require 'minitest/mock'
 require './train'
 
-class ConductorTest < MiniTest::Unit::TestCase
+class ConductorTest < Minitest::Test
 
 	def setup
-		@engineer = MiniTest::Mock.new
+		@engineer = Minitest::Mock.new
 		@conductor = Conductor.new(@engineer)
 	end
 
