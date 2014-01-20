@@ -7,7 +7,7 @@ class Conductor
 	end
 
 	def see_danger_coming!
-		messsage_board.slow_down!
+		message_board.slow_down!
 	end
 end
 
