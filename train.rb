@@ -13,3 +13,13 @@ end
 
 class Engineer
 end
+
+class MessageBoard
+
+  def slow_down!(engineer)
+  end
+
+  def confirm_slow_down!(conductor)
+  end
+
+end
