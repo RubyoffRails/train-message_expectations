@@ -12,12 +12,14 @@ class Conductor
 end
 
 class Engineer
+
+  def slow_down!
+    "Hey, we are slowing down!"
+  end
 end
 
 class MessageBoard
 
-  def slow_down!(engineer)
-  end
 
   def confirm_slow_down!(conductor)
   end

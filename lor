@@ -1,0 +1,24 @@
+.FF
+
+Failures:
+
+  1) MessageBoard should receive slow down from conductor
+     Failure/Error: conductor.see_danger_coming!
+     NameError:
+       undefined local variable or method `conductor' for #<RSpec::Core::ExampleGroup::Nested_2:0x00000101262710>
+     # ./train_spec.rb:22:in `block (2 levels) in <top (required)>'
+
+  2) MessageBoard should receive a slow down confirmation from the engineer
+     Failure/Error: message_board.should_receive(:confirm_slow_down!)
+       (#<MessageBoard:0x0000010086a690>).confirm_slow_down!(any args)
+           expected: 1 time with any arguments
+           received: 0 times with any arguments
+     # ./train_spec.rb:26:in `block (2 levels) in <top (required)>'
+
+Finished in 0.01176 seconds
+3 examples, 2 failures
+
+Failed examples:
+
+rspec ./train_spec.rb:20 # MessageBoard should receive slow down from conductor
+rspec ./train_spec.rb:25 # MessageBoard should receive a slow down confirmation from the engineer

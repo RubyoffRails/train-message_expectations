@@ -16,13 +16,17 @@ end
 describe MessageBoard do
 
   let(:message_board) { MessageBoard.new }
+  let(:conductor) { Conductor.new(engineer)}
+  let(:engineer) { Engineer.new }
 
   it "should receive slow down from conductor" do
     message_board.should_receive(:slow_down!)
+    conductor.see_danger_coming!
   end
 
   it "should receive a slow down confirmation from the engineer" do
     message_board.should_receive(:confirm_slow_down!)
+    engineer.should(:slow_down!)
   end
 end
 
