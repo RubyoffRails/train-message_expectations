@@ -14,14 +14,20 @@ end
 class Engineer
 
   def slow_down!
-    "Hey, we are slowing down!"
   end
 end
 
 class MessageBoard
 
+  attr_reader :message_board
 
-  def confirm_slow_down!(conductor)
+  def initialize(message_board)
+    @message_board = message_board
   end
+
+  def confirm
+    @message_board.slow_down!
+  end
+
 
 end

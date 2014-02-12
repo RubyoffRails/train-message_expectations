@@ -15,7 +15,7 @@ end
 
 describe MessageBoard do
 
-  let(:message_board) { MessageBoard.new }
+  let(:message_board) { MessageBoard.new(engineer) }
   let(:conductor) { Conductor.new(engineer)}
   let(:engineer) { Engineer.new }
 
@@ -25,8 +25,8 @@ describe MessageBoard do
   end
 
   it "should receive a slow down confirmation from the engineer" do
-    message_board.should_receive(:confirm_slow_down!)
-    engineer.should(:slow_down!)
+    message_board.confirm.should_receive(:slow_down!)
+    engineer.should_receive(:slow_down!)
   end
 end
 
