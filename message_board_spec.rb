@@ -11,7 +11,7 @@ describe MessageBoard do
 		conductor.see_danger_coming!
 	end
 
-  it "should confirm to the condocutor that it slowed down" do
+  it "should confirm to the conductor that it slowed down" do
     message_board.should_receive(:confirm_slow_down)
     engineer.slowing_down!
   end
