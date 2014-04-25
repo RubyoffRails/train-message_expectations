@@ -1,7 +1,6 @@
 class Conductor
 
-  attr_reader :engineer
-	attr_reader :message_board
+  attr_reader :engineer, :message_board
 
 	def initialize(message_board, engineer)
     @engineer = engineer

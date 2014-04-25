@@ -3,7 +3,7 @@ require './train'
 describe Conductor do
 
   let(:engineer) { Engineer.new (message_board)}
-  let(:conductor) { Conductor.new(message_board,engineer)}
+  let(:conductor) { Conductor.new(message_board, engineer)}
   let(:message_board) { MessageBoard.new }
 
   it "Should notify the messageboard to slow down when danger is imminent" do
@@ -15,7 +15,7 @@ end
 describe Engineer do
 
   let(:engineer) { Engineer.new (message_board)}
-  let(:conductor) { Conductor.new(message_board,engineer)}
+  let(:conductor) { Conductor.new(message_board, engineer)}
   let(:message_board) { MessageBoard.new }
 
   it "Should receive the slowdown message" do
