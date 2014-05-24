@@ -2,8 +2,8 @@ require 'rspec'
 require './train'
 describe Conductor do
 
-	let(:engineer) { mock }
-	let(:message_board) { mock }
+	let(:engineer) { double }
+	let(:message_board) { double }
 	let(:conductor) { Conductor.new(engineer, message_board)}
 
 	it "should tell the message board to slow down" do
@@ -14,7 +14,7 @@ end
 
 describe Engineer do
 
-	let(:message_board) { mock }
+	let(:message_board) { double }
 	let(:engineer) { Engineer.new(message_board) }
 
 
